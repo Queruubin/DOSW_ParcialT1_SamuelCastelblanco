@@ -47,3 +47,42 @@ El sistema de EventSync debe tener
 
 1. Una paleta de colores oscura
 2. La aplicacion debe soportar mas de 10.000 usuarios al mismo tiempo
+
+
+## Patrones
+
+Nombre del patron: Factory
+Tipo de patron: Creacional
+Decision: Para este caso se decidio utilizar el patron factory ya que nos facilita en un futuro la cracion
+de eventos por medio de una superclase
+
+Nombre del patron: Adapter
+Tipo de patron: Estructural
+Decision: Como el sistema debe interactuar con sistemas externos 
+que entregan la información de los usuarios en formatos de texto diferentes se usa adapter para que sin importar el usuarios
+se pueda registrar o crear eventos sin problema
+
+## Epica
+
+Creacion de eventos
+
+## Historia de usuario
+
+COMO Profesor
+QUIERO crear una conferencia 
+PARA Dar una charla a mis estudiantes
+
+## Tareas
+
+1. Creacion de interfaz para la creacion de eventos (formulario)
+2. Validacion de datos
+3. Creacion del endpoint para recibir datos del evento y crearlo
+
+### Principio SOLID
+
+Opend/Closed: En este desarrollo estamos usando el opend/closed ya que puede que exista en un futuro otro tipo de evento diferente
+pero gracias a factory method esto no seria un problema.
+
+## Diagrama de clases
+
+![alt text](image-3.png)
